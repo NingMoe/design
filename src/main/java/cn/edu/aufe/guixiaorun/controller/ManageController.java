@@ -9,6 +9,7 @@ import cn.edu.aufe.guixiaorun.service.*;
 import cn.edu.aufe.guixiaorun.util.RegCheck;
 import cn.edu.aufe.guixiaorun.util.StringUtil;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
@@ -22,6 +23,7 @@ import java.util.List;
  * Created by guixiaorun on 15-4-27.
  */
 @Controller
+@Transactional
 public class ManageController {
 
     //查看所有老师
@@ -260,7 +262,7 @@ public class ManageController {
                 out.flush();
                 out.close();
             } else {
-                //生成一个教师id，按主键逆序查最后一条的id+1。
+                //生成一个学生id，按主键逆序查最后一条的id+1。
                 Integer id = studentService.getLastId() + 1;
                 if (id==null){
                     id = 20110001;
@@ -269,6 +271,7 @@ public class ManageController {
                 String password = ((int) ((Math.random() * 9 + 1) * 100000)) + "";
                 //添加学生记录(教师表和帐号表都得增加记录)
                 accountService.addAccount(id,name,password);
+                int i = 1/0;
                 studentService.insertStudent(id, name, password, academy, phone, inClass, profession, sex);
                 out.write("yes");
                 out.flush();

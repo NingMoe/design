@@ -8,6 +8,6 @@
         <setting name="useGeneratedKeys" value="true"/>
     </settings>
     <typeAliases>
-        <typeAlias type="cn.edu.aufe.guixiaorun.entity.PaperItemEntity" alias="PaperItemEntity"/>
+        <!--<typeAlias type="cn.edu.aufe.guixiaorun.entity.PaperItemEntity" alias="PaperItemEntity"/>-->
     </typeAliases>
 </configuration>

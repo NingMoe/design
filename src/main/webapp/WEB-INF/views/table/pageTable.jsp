@@ -5,36 +5,36 @@
        class="table table-striped table-bordered table-hover dataTable no-footer"
        id="dt_basic" role="grid" aria-describedby="dt_basic_info" style="width: 100%; margin-top:0px;">
     <thead>
-    <tr role="row" class="success" >
-        <th rowspan="1" colspan="1" style="width: 68px;"><i
+    <tr role="row" >
+        <th class="sorting" rowspan="1" colspan="1" style="width: 68px;"><i
                 class="fa fa-fw fa-list-ol txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             编号
         </th>
-        <th rowspan="1" colspan="1" style="width: 86px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 86px;"><i
                 class="fa fa-fw fa-user txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             导师
         </th>
-        <th rowspan="1" colspan="1" style="width: 145px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 145px;"><i
                 class="fa fa-fw fa-university txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             学院
         </th>
-        <th rowspan="1" colspan="1" style="width: 125px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 125px;"><i
                 class="fa fa-fw fa-graduation-cap txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             专业
         </th>
-        <th rowspan="1" colspan="1" style="width: 307px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 307px;"><i
                 class="fa fa-fw fa-text-height txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             论文标题
         </th>
-        <th rowspan="1" colspan="1" style="width: 255px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 255px;"><i
                 class="fa fa-fw fa-pencil-square-o txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             备注
         </th>
-        <th rowspan="1" colspan="1" style="width: 60px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 60px;"><i
                 class="fa fa-fw fa-check txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             状态
         </th>
-        <th rowspan="1" colspan="1" style="width: 100px;"><i
+        <th class="sorting" rowspan="1" colspan="1" style="width: 100px;"><i
                 class="fa fa-fw fa-calendar txt-color-blue hidden-md hidden-sm hidden-xs"></i>
             增加日期
         </th>

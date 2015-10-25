@@ -8,6 +8,7 @@ import cn.edu.aufe.guixiaorun.service.StudentService;
 import cn.edu.aufe.guixiaorun.util.RegCheck;
 import cn.edu.aufe.guixiaorun.util.StringUtil;
 import org.springframework.stereotype.Controller;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.annotation.Resource;
@@ -21,6 +22,7 @@ import java.util.List;
  * Created by guixiaorun on 15-4-7.
  */
 @Controller
+@Transactional
 public class StudentController {
 
     //学生个人信息
