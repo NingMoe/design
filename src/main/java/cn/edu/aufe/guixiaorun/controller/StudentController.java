@@ -22,7 +22,6 @@ import java.util.List;
  * Created by guixiaorun on 15-4-7.
  */
 @Controller
-@Transactional
 public class StudentController {
 
     //学生个人信息
@@ -40,6 +39,7 @@ public class StudentController {
     }
 
     //修改个人信息，暂时只支持修改联系方式
+    @Transactional
     @RequestMapping(value = "/design/student/updateInfo")
     public void updateInfo(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -131,6 +131,7 @@ public class StudentController {
     }
 
     //选择论文操作
+    @Transactional
     @RequestMapping(value = "/design/student/getPaper")
     public void selectCheck(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -160,6 +161,7 @@ public class StudentController {
     }
 
     //取消已选论文，成功后可以重新选择论文
+    @Transactional
     @RequestMapping(value = "/design/student/canclePaper")
     public void canclePaper(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();

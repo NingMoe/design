@@ -101,6 +101,7 @@ public class TeacherController {
     }
 
     //修改个人信息，暂时只支持修改联系方式
+    @Transactional
     @RequestMapping(value = "/design/teacher/updateInfo")
     public void updateInfo(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -124,6 +125,7 @@ public class TeacherController {
     }
 
     //教师发布论文
+    @Transactional
     @RequestMapping(value = "/design/teacher/addPaper")
     public void addPaper(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -154,6 +156,7 @@ public class TeacherController {
     }
 
     //教师删除论文
+    @Transactional
     @RequestMapping(value = "/design/teacher/paperDelete")
     public void paperDelete(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -173,6 +176,7 @@ public class TeacherController {
         }
     }
     //教师修改论文
+    @Transactional
     @RequestMapping(value = "/design/teacher/updatePaper")
     public void paperUpdate(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();

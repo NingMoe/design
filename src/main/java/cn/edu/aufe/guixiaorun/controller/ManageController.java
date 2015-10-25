@@ -23,7 +23,6 @@ import java.util.List;
  * Created by guixiaorun on 15-4-27.
  */
 @Controller
-@Transactional
 public class ManageController {
 
     //查看所有老师
@@ -94,6 +93,7 @@ public class ManageController {
     }
 
     //增加教师
+    @Transactional
     @RequestMapping(value = "/design/manage/addTeacher")
     public void addTeacher(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -127,6 +127,7 @@ public class ManageController {
     }
 
     //删除教师
+    @Transactional
     @RequestMapping(value = "/design/manage/deleteTeacher")
     public void teacherDelete(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -149,6 +150,7 @@ public class ManageController {
         }
     }
     //修改教师
+    @Transactional
     @RequestMapping(value = "/design/manage/updateTeacher")
     public void teacherUpdate(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -244,6 +246,7 @@ public class ManageController {
     }
 
     //增加学生
+    @Transactional
     @RequestMapping(value = "/design/manage/addStudent")
     public void addStudent(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -271,7 +274,6 @@ public class ManageController {
                 String password = ((int) ((Math.random() * 9 + 1) * 100000)) + "";
                 //添加学生记录(教师表和帐号表都得增加记录)
                 accountService.addAccount(id,name,password);
-                int i = 1/0;
                 studentService.insertStudent(id, name, password, academy, phone, inClass, profession, sex);
                 out.write("yes");
                 out.flush();
@@ -281,6 +283,7 @@ public class ManageController {
     }
 
     //删除学生
+    @Transactional
     @RequestMapping(value = "/design/manage/deleteStudent")
     public void studentDelete(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -306,6 +309,7 @@ public class ManageController {
         }
     }
     //修改学生
+    @Transactional
     @RequestMapping(value = "/design/manage/updateStudent")
     public void studentUpdate(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
@@ -346,6 +350,7 @@ public class ManageController {
     }
 
     //改变通知
+    @Transactional
     @RequestMapping(value = "/design/notify/add")
     public void notifyAdd(HttpServletRequest req, HttpServletResponse res) throws Exception {
         HttpSession session = req.getSession();
