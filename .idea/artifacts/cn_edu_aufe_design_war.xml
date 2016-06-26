@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="cn-edu-aufe-design:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="cn-edu-aufe-design-0.0.1-SNAPSHOT.war">
-      <element id="artifact" artifact-name="cn-edu-aufe-design:war exploded" />
-    </root>
-  </artifact>
-</component>
