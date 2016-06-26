@@ -1,0 +1,15 @@
+oc-be.ipr
+oc-be.iws
+/*applicationContext-localhost.xml
+/*.DS_Store
+.settings
+.classpath
+.idea/*
+*.iml
+*.bak
+.project
+target
+bin
+*.log
+*.epoch
+*.lck
