@@ -1,0 +1,32 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop 
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	
+	<!-- properties文件加载 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:jdbc.properties</value>
+                <!-- <value>classpath:xxx.properties</value> -->
+            </list>
+        </property>
+    </bean>
+
+    <context:annotation-config />
+
+	<!-- 扫描注解加载实例 -->
+	<context:component-scan base-package="cn.edu.aufe.guixiaorun.service" />
+
+    <import resource="datasource.xml" />
+
+	<!-- 自动实现动态代理（注解） -->
+	<aop:aspectj-autoproxy /> 
+	
+</beans>
