@@ -2,7 +2,7 @@
 
 ![aufe.jpg](aufe.jpg)
 
-[**http//www.aufe.edu.cn**](http://www.aufe.edu.cn)
+[**http://www.aufe.edu.cn**](http://www.aufe.edu.cn)
 
 ### 设计目标
 - 顺利通过毕业答辩
